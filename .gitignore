@@ -1,4 +1,4 @@
-# Data (too big for GitHub - download Sentiment140 separately)
+# Data (too big for GitHub - downloaded by the notebook and excluded from Git)
 *.csv
 *.zip
 data/

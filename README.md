@@ -10,7 +10,7 @@ Everything is walked through, step by step, in **`Sentiment_Analysis_Pipeline.ip
 ```
 .
 |-- Sentiment_Analysis_Pipeline.ipynb   # the whole project, step by step
-|-- train.csv                           # Sentiment140 (not committed - too big)
+|-- data/                               # downloaded Sentiment140 data (not committed)
 |-- sentiment/                          # shared code
 |   |-- preprocess.py                   # clean_text / tokenize (used in training AND the API)
 |   `-- model_store.py                  # versioned model registry
@@ -32,7 +32,7 @@ Everything is walked through, step by step, in **`Sentiment_Analysis_Pipeline.ip
 
 ```bash
 pip install -r requirements-dev.txt
-jupyter notebook Sentiment_Analysis_Pipeline.ipynb   # run all cells -> trains models/v1
+jupyter notebook Sentiment_Analysis_Pipeline.ipynb   # downloads Sentiment140 on first run, then trains models/v1
 pytest -v
 python app/app.py                                     # http://localhost:5000
 curl -X POST localhost:5000/predict -H "Content-Type: application/json" -d "{\"tweet\": \"I love this!\"}"

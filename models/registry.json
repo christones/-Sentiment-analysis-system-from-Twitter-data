@@ -1,0 +1,25 @@
+{
+  "current": "v1",
+  "versions": {
+    "v1": {
+      "created_utc": "2026-10-12T08:51:20+00:00",
+      "metrics": {
+        "validation": {
+          "accuracy": 0.8211,
+          "f1": 0.8215,
+          "precision": 0.8143,
+          "recall": 0.8288,
+          "roc_auc": 0.8997
+        },
+        "test": {
+          "accuracy": 0.8229,
+          "f1": 0.8234,
+          "precision": 0.8154,
+          "recall": 0.8317,
+          "roc_auc": 0.9009
+        }
+      },
+      "notes": "TF-IDF (1-2 grams) + logistic regression on Sentiment140"
+    }
+  }
+}

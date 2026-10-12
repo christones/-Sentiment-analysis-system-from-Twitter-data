@@ -1,0 +1,44 @@
+{
+  "version": "v1",
+  "created_utc": "2026-10-12T08:51:20+00:00",
+  "metrics": {
+    "validation": {
+      "accuracy": 0.8211,
+      "f1": 0.8215,
+      "precision": 0.8143,
+      "recall": 0.8288,
+      "roc_auc": 0.8997
+    },
+    "test": {
+      "accuracy": 0.8229,
+      "f1": 0.8234,
+      "precision": 0.8154,
+      "recall": 0.8317,
+      "roc_auc": 0.9009
+    }
+  },
+  "params": {
+    "C": 2.0,
+    "solver": "liblinear",
+    "tfidf": {
+      "token_pattern": null,
+      "lowercase": false,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "min_df": 5,
+      "max_df": 0.95,
+      "max_features": 300000,
+      "sublinear_tf": true
+    },
+    "train_size": 1217309,
+    "val_size": 152164,
+    "test_size": 152164,
+    "sklearn_version": "1.7.2",
+    "data_file": "training.1600000.processed.noemoticon.csv",
+    "sample_size": null
+  },
+  "notes": "TF-IDF (1-2 grams) + logistic regression on Sentiment140",
+  "size_mb": 5.86
+}

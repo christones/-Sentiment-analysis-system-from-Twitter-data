@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: sentiment-api
-          image: DOCKERHUB_USERNAME/sentiment-api:latest
+          image: christones/sentiment-api:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 5000

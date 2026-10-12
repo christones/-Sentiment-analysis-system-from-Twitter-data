@@ -1,0 +1,16 @@
+Started 2026-10-12  4:43:29,97 
+Using: 
+C:\Users\Dell\AppData\Local\Programs\Python\Launcher\py.exe
+Python 3.14.0
+Installing Jupyter tools... 
+
+[notice] A new release of pip is available: 25.2 -> 26.2.1
+[notice] To update, run: C:\Users\Dell\AppData\Local\Programs\Python\Python314\python.exe -m pip install --upgrade pip
+Executing notebook (this can take 10-30 minutes on 1.6M tweets)... 
+[NbConvertApp] Converting notebook Sentiment_Analysis_Pipeline.ipynb to notebook
+C:\Users\Dell\AppData\Roaming\Python\Python314\site-packages\zmq\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.
+  self._get_loop()
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 479034 bytes to Sentiment_Analysis_Pipeline.ipynb
+EXIT CODE 0 
+Finished 2026-10-12  4:51:37,84 
