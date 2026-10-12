@@ -1,0 +1,16 @@
+# Keep the build context small: the dataset alone is >500 MB
+*.csv
+*.zip
+*.ipynb
+.ipynb_checkpoints/
+.git/
+.github/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+tests/
+k8s/
+reports/
+*.md

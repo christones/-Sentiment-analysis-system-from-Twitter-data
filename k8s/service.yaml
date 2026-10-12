@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sentiment-api
+  namespace: sentiment
+spec:
+  # NodePort works on Docker Desktop / minikube / a local server.
+  # On AWS EKS change this to `type: LoadBalancer` and remove nodePort.
+  type: NodePort
+  selector:
+    app: sentiment-api
+  ports:
+    - port: 80
+      targetPort: 5000
+      nodePort: 30080

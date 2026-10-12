@@ -1,0 +1,3 @@
+# Optional: deep-learning stack for experimenting with BERT (not needed by the API)
+torch
+transformers

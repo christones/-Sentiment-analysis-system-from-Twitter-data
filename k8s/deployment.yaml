@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sentiment-api
+  namespace: sentiment
+  labels:
+    app: sentiment-api
+spec:
+  replicas: 2
+  revisionHistoryLimit: 10          # keeps old ReplicaSets so `kubectl rollout undo` works
+  selector:
+    matchLabels:
+      app: sentiment-api
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0             # zero-downtime updates
+  template:
+    metadata:
+      labels:
+        app: sentiment-api
+    spec:
+      containers:
+        - name: sentiment-api
+          image: DOCKERHUB_USERNAME/sentiment-api:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+          # Model rollback without a new image:
+          #   kubectl -n sentiment set env deployment/sentiment-api MODEL_VERSION=v1
+          resources:
+            requests:
+              cpu: 250m
+              memory: 384Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 30
+            periodSeconds: 20

@@ -1,0 +1,16 @@
+# Data (too big for GitHub - download Sentiment140 separately)
+*.csv
+*.zip
+data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local secrets
+.env
+kubeconfig*
